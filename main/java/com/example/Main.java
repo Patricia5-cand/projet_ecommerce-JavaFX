@@ -15,17 +15,17 @@ public class Main  extends Application {
         TabPane tabPane = new TabPane();
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
 
-        // Onglet Clients
+    
         Tab tabClients = new Tab("👤 Clients");
         tabClients.setContent(FXMLLoader.load(
                 getClass().getResource("/view/client.fxml")));
 
-        // Onglet Produits
+        
         Tab tabProduits = new Tab("📦 Produits");
         tabProduits.setContent(FXMLLoader.load(
                 getClass().getResource("/view/produit.fxml")));
 
-        // Onglet Commandes
+        
         Tab tabCommandes = new Tab("🛒 Commandes");
         tabCommandes.setContent(FXMLLoader.load(
                 getClass().getResource("/view/Commande.fxml")));
