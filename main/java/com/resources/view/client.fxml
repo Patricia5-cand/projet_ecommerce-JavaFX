@@ -1,1 +1,25 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <Label text="Gestion des Clients" styleClass="title-label" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+    
+    <HBox spacing="15">
+        <VBox spacing="10" prefWidth="250">
+            <TextField fx:id="txtNom" promptText="Nom du client" styleClass="text-field"/>
+            <TextField fx:id="txtEmail" promptText="Email" styleClass="text-field"/>
+            <Button text="Enregistrer Client" onAction="#handleSave" styleClass="btn-success" maxWidth="Infinity"/>
+        </VBox>
+        <TableView fx:id="tableClients" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50" />
+                <TableColumn fx:id="colNom" text="Nom" prefWidth="150" />
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="200" />
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>
