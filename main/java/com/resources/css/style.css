@@ -1,1 +1,213 @@
+/* ============================================================
+   Mini E-Commerce – Feuille de style JavaFX
+   ============================================================ */
 
+/* ── Général ─────────────────────────────────────────────── */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f0f2f5;
+}
+
+/* ── En-tête ─────────────────────────────────────────────── */
+.header {
+    -fx-background-color: #1a1a2e;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: #e94560;
+}
+
+.titre-page {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.sous-titre {
+    -fx-font-size: 12px;
+    -fx-text-fill: #a0a8c0;
+}
+
+/* ── Onglets ─────────────────────────────────────────────── */
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: #16213e;
+}
+
+.tab {
+    -fx-background-color: #16213e;
+    -fx-padding: 8 18;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #a0a8c0;
+    -fx-font-size: 13px;
+}
+
+.tab:selected {
+    -fx-background-color: #e94560;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ── Labels ──────────────────────────────────────────────── */
+.section-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #e94560;
+    -fx-padding: 0 0 4 0;
+}
+
+.field-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #555e6e;
+    -fx-font-weight: bold;
+}
+
+.message {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-min-height: 20px;
+}
+
+.legende {
+    -fx-font-size: 11px;
+    -fx-text-fill: #888;
+    -fx-font-style: italic;
+}
+
+.label-total {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e94560;
+    -fx-alignment: center;
+    -fx-padding: 8;
+    -fx-background-color: #fff0f3;
+    -fx-background-radius: 6;
+    -fx-border-color: #e94560;
+    -fx-border-radius: 6;
+    -fx-border-width: 1.5;
+}
+
+/* ── Champs de saisie ────────────────────────────────────── */
+.champ {
+    -fx-background-color: white;
+    -fx-border-color: #d0d7e0;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 7 10;
+    -fx-font-size: 13px;
+}
+
+.champ:focused {
+    -fx-border-color: #e94560;
+    -fx-effect: dropshadow(gaussian, rgba(233,69,96,0.3), 6, 0, 0, 0);
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #d0d7e0;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.combo-box:focused {
+    -fx-border-color: #e94560;
+}
+
+/* ── Boutons ─────────────────────────────────────────────── */
+.btn-primary {
+    -fx-background-color: #e94560;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.btn-primary:hover { -fx-background-color: #c73652; }
+
+.btn-secondary {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.btn-secondary:hover { -fx-background-color: #2176ae; }
+
+.btn-danger {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.btn-danger:hover { -fx-background-color: #c0392b; }
+
+.btn-neutral {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.btn-neutral:hover { -fx-background-color: #7f8c8d; }
+
+.btn-valider {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+.btn-valider:hover { -fx-background-color: #1e8449; }
+
+/* ── TableView ───────────────────────────────────────────── */
+.ma-table {
+    -fx-background-color: white;
+    -fx-border-color: #d0d7e0;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.ma-table .column-header {
+    -fx-background-color: #1a1a2e;
+    -fx-padding: 8 6;
+}
+
+.ma-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.ma-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #f0f2f5 transparent;
+}
+
+.ma-table .table-row-cell:odd {
+    -fx-background-color: #fafbfc;
+}
+
+.ma-table .table-row-cell:selected {
+    -fx-background-color: #fde8ec;
+}
+
+.ma-table .table-row-cell:selected .text {
+    -fx-fill: #1a1a2e;
+}
+
+/* ── Séparateur ──────────────────────────────────────────── */
+.separator .line {
+    -fx-border-color: #d0d7e0;
+}
