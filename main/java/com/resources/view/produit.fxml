@@ -1,1 +1,27 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProduitController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <Label text="Gestion du Stock" styleClass="title-label" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+    
+    <HBox spacing="15">
+        <VBox spacing="10" prefWidth="250">
+            <TextField fx:id="txtDesignation" promptText="Nom du produit" />
+            <TextField fx:id="txtPrix" promptText="Prix unitaire" />
+            <TextField fx:id="txtStock" promptText="Quantité" />
+            <Button text="Ajouter au Stock" onAction="#handleAdd" styleClass="btn-success" maxWidth="Infinity"/>
+        </VBox>
+        <TableView fx:id="tableProduits" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" />
+                <TableColumn fx:id="colDesignation" text="Désignation" />
+                <TableColumn fx:id="colPrix" text="Prix" />
+                <TableColumn fx:id="colStock" text="Stock" />
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>
