@@ -1,1 +1,44 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CommandeController" styleClass="main-container">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Nouvelle Commande" styleClass="title-label"/>
+    
+    <GridPane hgap="10" vgap="15" styleClass="form-grid">
+        <Label text="Client :" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="field-label"/>
+        <ComboBox fx:id="cbClients" prefWidth="250" promptText="Sélectionner un client" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+        <Label text="Produit :" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="field-label"/>
+        <ComboBox fx:id="cbProduits" prefWidth="250" promptText="Choisir un article" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <Label text="Quantité :" GridPane.columnIndex="2" GridPane.rowIndex="1" styleClass="field-label"/>
+        <TextField fx:id="txtQte" prefWidth="80" promptText="0" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        
+        <Button text="Ajouter au panier" styleClass="btn-add" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+    </GridPane>
+
+    <TableView fx:id="tablePanier" VBox.vgrow="ALWAYS" styleClass="modern-table">
+        <columns>
+            <TableColumn fx:id="colProd" prefWidth="200" text="Produit" />
+            <TableColumn fx:id="colQte" prefWidth="100" text="Quantité" />
+            <TableColumn fx:id="colSousTotal" prefWidth="120" text="Sous-Total" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+    
+    <HBox alignment="CENTER_RIGHT" spacing="20" styleClass="footer-area">
+        <Button text="Vider le panier" styleClass="btn-secondary"/>
+        <Label fx:id="lblTotal" text="TOTAL : 0.00 €" styleClass="total-label"/>
+        <Button text="Finaliser la commande" styleClass="btn-success"/>
+    </HBox>
+</VBox>
